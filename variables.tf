@@ -44,3 +44,9 @@ variable "vsphere_network" {
 variable "vsphere_resource_pool" {
   description = "Name of the resource pool"
 }
+
+// Consul server options
+variable "bootstrap_expect" {
+  default     = 3
+  description = "Number of expected servers in the data center"
+}

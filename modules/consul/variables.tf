@@ -1,5 +1,4 @@
 variable "bootstrap_expect" {
-  default     = 3
   description = "Number of expected servers in the data center"
 }
 

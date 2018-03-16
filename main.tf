@@ -36,7 +36,8 @@ data "vsphere_resource_pool" "default" {
 module "consul" {
   source = "./modules/consul"
 
-  server = true
+  bootstrap_expect = "${var.bootstrap_expect}"
+  server           = true
 
   datastore_id     = "${data.vsphere_datastore.default.id}"
   network_id       = "${data.vsphere_network.default.id}"
