@@ -1,5 +1,4 @@
 // Provider options
-
 variable "allow_unverified_ssl" {
   default     = false
   description = "Disable SSL certificate verification"
@@ -18,7 +17,6 @@ variable "vsphere_server" {
 }
 
 // Debugging options
-
 variable "client_debug" {
   default     = false
   description = "Log SOAP calls made to the vSphere API to disk"
@@ -27,4 +25,22 @@ variable "client_debug" {
 variable "client_debug_path" {
   default     = "${pathexpand("~")/.govmomi}"
   description = "Default log path"
+}
+
+// Variables for data providers
+variable "vsphere_datacenter" {
+  default     = ""
+  description = "Name of the data center"
+}
+
+variable "vsphere_datastore" {
+  description = "Name of the data store"
+}
+
+variable "vsphere_network" {
+  description = "Name of the network"
+}
+
+variable "vsphere_resource_pool" {
+  description = "Name of the resource pool"
 }
